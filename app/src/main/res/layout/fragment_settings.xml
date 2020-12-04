@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.magoro.MainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/contentBodyColor"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            style="@style/viewParent.headerText"
+            android:text="Settings" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <TextView
+                android:id="@+id/usernameTextView"
+                style="@style/viewParent.headerText"
+                android:text="Magoro"
+                android:textSize="18sp"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                style="@style/viewParent.headerText"
+                android:text=" "
+                android:textSize="16sp"
+                android:textColor="#5D5C5C"
+                android:layout_below="@id/usernameTextView"/>
+
+            <ImageView
+                style="@style/viewParent"
+                android:src="@drawable/ic_more"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <Switch
+            android:id="@+id/darkModeSwitch"
+            style="@style/settingsText"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:text="Settings 1" />
+
+        <TextView
+           style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="Settings Region 1"/>
+
+        <TextView
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:text="Settings 2" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:layout_marginTop="10dp"
+            android:text="Settings 3" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="Settings Region 2"/>
+
+        <Switch
+            style="@style/settingsText"
+            android:checked="true"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:text="Settings 4" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text="Settings Region 3"/>
+
+        <TextView
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:text="Settings 5" />
+
+        <TextView
+            style="@style/viewParent.headerText.settingsTextIcon"
+            android:drawableLeft="@drawable/bottom_navigation_background"
+            android:text="Settings 6" />
+
+
+        <TextView
+            style="@style/viewParent.headerText.settingsMiniTitle"
+            android:text=""
+            android:textAlignment="center"/>
+
+    </LinearLayout>
+</ScrollView>
