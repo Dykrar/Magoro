@@ -11,6 +11,8 @@
         android:layout_height="match_parent"
         android:layout_alignParentTop="true">
 
+
+
         <RelativeLayout
             android:id="@+id/HFLayout"
             android:layout_width="match_parent"
@@ -20,92 +22,193 @@
             app:layout_constraintVertical_bias="0.547">
 
 
-            <ImageButton
-                android:id="@+id/sleep"
-                android:layout_width="66dp"
-                android:layout_height="66dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginBottom="324dp"
-                android:src="@drawable/ic_hotel_24px" />
 
-            <ImageButton
-                android:id="@+id/food"
-                android:layout_width="66dp"
-                android:layout_height="66dp"
-                android:layout_above="@+id/carinho"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="18dp"
-                android:layout_marginBottom="0dp"
-                android:src="@drawable/ic_restaurant_24px" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/carta1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp">
 
-            <ImageButton
-                android:id="@+id/carinho"
-                android:layout_width="66dp"
-                android:layout_height="66dp"
-                android:layout_above="@+id/sleep"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="19dp"
-                android:layout_marginBottom="0dp"
-                android:src="@drawable/ic_home_24px" />
 
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="71dp"
-                android:layout_marginTop="8dp"
-                android:text="Food Level" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="71dp"
-                android:layout_marginTop="75dp"
-                android:text="Happiness Level" />
+                    <View
+                        android:id="@+id/fakeView"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_centerInParent="true"/>
 
-            <ProgressBar
-                android:id="@+id/progressBar"
-                style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
-                android:layout_width="290dp"
-                android:layout_height="44dp"
-                android:layout_below="@+id/textView11"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="1dp"
-                android:layout_marginRight="49dp"
-                android:background="#FFFFFF"
-                android:progress="20"
-                android:progressTint="#188E9E"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                        <LinearLayout
+                            android:id="@+id/foodLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:layout_alignEnd="@+id/fakeView">
 
-            <ProgressBar
-                android:id="@+id/progressBar2"
-                style="@android:style/Widget.DeviceDefault.ProgressBar.Horizontal"
-                android:layout_width="290dp"
-                android:layout_height="44dp"
-                android:layout_below="@+id/textView13"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="72dp"
-                android:layout_marginLeft="72dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginEnd="85dp"
-                android:layout_marginRight="49dp"
-                android:background="#FFFFFF"
-                android:progress="20"
-                android:progressTint="#188E9E"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/meal"></ImageView>
+
+                            <ProgressBar
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                            </ProgressBar>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/happyLL"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_alignStart="@+id/fakeView">
+
+                            <ImageView
+                                android:layout_width="40dp"
+                                android:layout_height="40dp"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/ic_happy"></ImageView>
+
+                            <ProgressBar
+                                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:end="5dp">
+
+                            </ProgressBar>
+
+                        </LinearLayout>
+
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/carta1"
+                android:layout_marginTop="0.1dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:layout_width="150dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginEnd="0dp"
+                        android:layout_marginBottom="0dp">
+
+
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/sleep"
+                                android:src="@drawable/ic_hotel_24px" >
+
+                            </ImageButton>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/food"
+                                android:src="@drawable/ic_restaurant_24px">
+
+                            </ImageButton>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="50dp"
+                            android:layout_height="match_parent">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/carinho"
+                                android:src="@drawable/ic_home_24px">
+
+                            </ImageButton>
+
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/Money">
+
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="15dp"
+                            android:layout_marginStart="10dp"
+                            android:textSize="15sp"
+                            android:textAlignment="center"
+                            android:text="0"></TextView>
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/money">
+
+
+                        </ImageView>
+
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="15dp"
+                            android:textSize="15sp"
+                            android:layout_marginStart="10dp"
+                            android:textAlignment="center"
+                            android:text="0"></TextView>
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/money"
+                            >
+
+                        </ImageView>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+
         </RelativeLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
